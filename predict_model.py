@@ -10,3 +10,8 @@ def predict_gold(close_prices):
     else:
         return "下跌 📉", "建议卖出 🚪"
 
+def get_gold_prices_from_alpha_vantage():
+    # 示例逻辑: 模拟从 Alpha Vantage 获取金价
+    return [random.uniform(1800, 2000) for _ in range(10)]
+
+close_prices = get_gold_prices_from_alpha_vantage()
