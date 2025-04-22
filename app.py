@@ -28,11 +28,11 @@ def get_gold_prices_from_alpha_vantage():
         return close_prices
     except Exception as e:
         print("获取 Alpha Vantage 数据失败:", e)
-        return []
-    
-        "trend": trend
-        "timing": timing
-
+    return jsonify({
+     "close_prices": close_prices,
+     "trend": trend, # type: ignore
+     "suggestion": suggestion # type: ignore
+})
 if __name__ == '__main__':
  app.run(host='0.0.0.0', port=5000)
 
