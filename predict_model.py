@@ -1,6 +1,5 @@
 import random
 
-def predict_gold():
-    trend = random.choice(["上涨 📈", "下跌 📉"])
-    timing = random.choice(["建议立即买入 🛒", "建议观望或撤出 🧯"])
-    return trend, timing
+close_prices = get_gold_prices_from_alpha_vantage()
+if not close_prices:
+    print("获取黄金数据失败，请稍后重试")
